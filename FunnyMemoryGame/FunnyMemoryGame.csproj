@@ -94,5 +94,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\p1.bmp" />
+    <Resource Include="Resources\Images\p1a.bmp" />
+    <Resource Include="Resources\Images\p2.bmp" />
+    <Resource Include="Resources\Images\p2a.bmp" />
+    <Resource Include="Resources\Images\p3.bmp" />
+    <Resource Include="Resources\Images\p3a.bmp" />
+    <Resource Include="Resources\Images\p4.bmp" />
+    <Resource Include="Resources\Images\p4a.bmp" />
+    <Resource Include="Resources\Images\p5.bmp" />
+    <Resource Include="Resources\Images\p5a.bmp" />
+    <Resource Include="Resources\Images\tlo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Sounds\d1.wav" />
+    <Content Include="Resources\Sounds\d2.wav" />
+    <Content Include="Resources\Sounds\d3.wav" />
+    <Content Include="Resources\Sounds\d4.wav" />
+    <Content Include="Resources\Sounds\d5.wav" />
+    <Content Include="Resources\Sounds\koniec.wav" />
+    <Content Include="Resources\Sounds\start.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

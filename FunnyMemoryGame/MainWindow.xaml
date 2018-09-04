@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FunnyMemoryGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="Transparent">
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="245,322,235,38" VerticalAlignment="Top" Height="60" Width="312" FontSize="36" Cursor="Hand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Image x:Name="p1" HorizontalAlignment="Left" Height="100" Margin="68,72,0,248" Width="100" Source="Resources/Images/p1.bmp" Stretch="Fill"/>
-        <Image x:Name="p2"  Height="100" Margin="213,72,479,0" VerticalAlignment="Top" Width="100" Source="Resources/Images/p2.bmp" Stretch="Fill"/>
-        <Image x:Name="p3" HorizontalAlignment="Left" Height="100" Margin="364,72,0,248" Width="100" Source="Resources/Images/p3.bmp" Stretch="Fill"/>
-        <Image x:Name="p4"  Height="100" Margin="497,72,195,0" VerticalAlignment="Top" Width="100" Source="Resources/Images/p4.bmp" Stretch="Fill"/>
-        <Image x:Name="p5" HorizontalAlignment="Left" Height="100" Margin="632,72,0,248" Width="100" Source="Resources/Images/p5.bmp" Stretch="Fill"/>
+        Title="MainWindow" Height="350" Width="700">
+    <Grid>
+        <Label x:Name="label" Content="Start Game" HorizontalAlignment="Left" Margin="117,163,0,0" VerticalAlignment="Top" Height="95" Width="501" FontSize="24" Cursor="Hand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseLeftButtonUp="label_MouseLeftButtonUp"/>
+        <Image x:Name="p1" Margin="79,34,535,219" Source="Resources/Images/p1.bmp" Stretch="Fill"/>
+        <Image x:Name="p2" Margin="197,34,417,219" Source="Resources/Images/p2.bmp" Stretch="Fill"/>
+        <Image x:Name="p3" Margin="326,34,287,219" Source="Resources/Images/p3.bmp" Stretch="Fill"/>
+        <Image x:Name="p4" Margin="441,34,173,219" Source="Resources/Images/p4.bmp" Stretch="Fill" />
+        <Image x:Name="p5" Margin="540,34,74,219" Source="Resources/Images/p5.bmp" Stretch="Fill"/>
     </Grid>
 </Window>

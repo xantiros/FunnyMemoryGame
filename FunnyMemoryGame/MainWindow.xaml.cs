@@ -19,6 +19,7 @@ namespace FunnyMemoryGame
         bool start_game = false;
         int rounds = 0;
         int[] num = new int[1000];
+        int counter;
 
         public MainWindow()
         {
@@ -26,7 +27,7 @@ namespace FunnyMemoryGame
 
             for (int i = 0; i < 1000; i++)
             {
-                num[i] = random.Next(6);
+                num[i] = random.Next(1,6);
             }
         }
 
@@ -36,18 +37,29 @@ namespace FunnyMemoryGame
             {
                 PlaySound("start.wav");
                 SequentionAsync();
+                start_game = true;
             }
         }
         async Task SequentionAsync()
         {
+            await Task.Delay(1000);
+
+            ChangeImage(p1, "p1.bmp");
+            ChangeImage(p2, "p2.bmp");
+            ChangeImage(p3, "p3.bmp");
+            ChangeImage(p4, "p4.bmp");
+            ChangeImage(p5, "p5.bmp");
+
+            await Task.Delay(1000);
             label.Content = "Next round in: 2";
             //Application.DoEvents();
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             //Thread.Sleep(5000);
             label.Content = "Next round in: 1";
             //Thread.Sleep(1000);
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             label.Content = "Memory the sequention";
+
             rounds++;
 
             for (int i = 0; i < rounds; i++)
@@ -86,6 +98,7 @@ namespace FunnyMemoryGame
                 ChangeImage(p5, "p5.bmp");
                 //Thread.Sleep(100);
                 await Task.Delay(200);
+                counter = 0;
             }//for
 
             label.Content = "Repeat the sequention.";
@@ -101,6 +114,117 @@ namespace FunnyMemoryGame
         {
             var uriSource = new Uri(@"Resources/Images/"+ imgName, UriKind.Relative);
             image.Source = new BitmapImage(uriSource);
+        }
+
+        private void p1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangeImage(p1, "p1a.bmp");
+            PlaySound("d1.wav");
+
+            if (start_game == false)
+                return;
+
+            counter++;
+            if (num[counter - 1] != 1)
+            {
+                label.Content = "End game, your score: " + rounds;
+                PlaySound("koniec.wav");
+                start_game = false;
+            }
+            if(counter == rounds)
+            {
+                label.Content = "Excelent!";
+                SequentionAsync();
+            }
+        }
+        private void p2_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangeImage(p2, "p2a.bmp");
+            PlaySound("d2.wav");
+
+
+            if (start_game == false)
+                return;
+
+            counter++;
+            if (num[counter - 1] != 2)
+            {
+                label.Content = "End game, your score: " + rounds;
+                PlaySound("koniec.wav");
+                start_game = false;
+            }
+
+            if (counter == rounds)
+            {
+                label.Content = "Excelent!";
+                SequentionAsync();
+            }
+        }
+        private void p3_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangeImage(p3, "p3a.bmp");
+            PlaySound("d3.wav");
+
+            if (start_game == false)
+                return;
+
+            counter++;
+            if (num[counter - 1] != 3)
+            {
+                label.Content = "End game, your score: " + rounds;
+                PlaySound("koniec.wav");
+                start_game = false;
+            }
+
+            if (counter == rounds)
+            {
+                label.Content = "Excelent!";
+                SequentionAsync();
+            }
+        }
+        private void p4_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangeImage(p4, "p4a.bmp");
+            PlaySound("d4.wav");
+
+            if (start_game == false)
+                return;
+
+            counter++;
+            if (num[counter - 1] != 4)
+            {
+                label.Content = "End game, your score: " + rounds;
+                PlaySound("koniec.wav");
+                start_game = false;
+            }
+
+            if (counter == rounds)
+            {
+                label.Content = "Excelent!";
+                SequentionAsync();
+            }
+        }
+        private void p5_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangeImage(p5, "p5a.bmp");
+            PlaySound("d5.wav");
+
+            if (start_game == false)
+                return;
+
+            counter++;
+            if (num[counter - 1] != 5)
+            {
+                label.Content = "End game, your score: " + rounds;
+                PlaySound("koniec.wav");
+                start_game = false;
+            }
+
+            if (counter == rounds)
+            {
+                label.Content = "Excelent!";
+                SequentionAsync();
+            }
         }
     }
 }

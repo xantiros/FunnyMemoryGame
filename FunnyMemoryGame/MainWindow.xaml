@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:FunnyMemoryGame"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Transparent">
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="245,322,235,38" VerticalAlignment="Top" Height="60" Width="312" FontSize="36" Cursor="Hand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Image x:Name="p1" HorizontalAlignment="Left" Height="100" Margin="68,72,0,248" Width="100" Source="Resources/Images/p1.bmp" Stretch="Fill"/>
+        <Image x:Name="p2"  Height="100" Margin="213,72,479,0" VerticalAlignment="Top" Width="100" Source="Resources/Images/p2.bmp" Stretch="Fill"/>
+        <Image x:Name="p3" HorizontalAlignment="Left" Height="100" Margin="364,72,0,248" Width="100" Source="Resources/Images/p3.bmp" Stretch="Fill"/>
+        <Image x:Name="p4"  Height="100" Margin="497,72,195,0" VerticalAlignment="Top" Width="100" Source="Resources/Images/p4.bmp" Stretch="Fill"/>
+        <Image x:Name="p5" HorizontalAlignment="Left" Height="100" Margin="632,72,0,248" Width="100" Source="Resources/Images/p5.bmp" Stretch="Fill"/>
     </Grid>
 </Window>

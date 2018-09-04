@@ -23,6 +23,7 @@ namespace FunnyMemoryGame
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
